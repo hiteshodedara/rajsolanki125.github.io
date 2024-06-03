@@ -1,37 +1,18 @@
-const firebaseConfig = {
-	apiKey: "AIzaSyAkk2p00f27FoZ6RyAKJfabm4ygkMHA0VU",
-	authDomain: "rajsolankime.firebaseapp.com",
-	databaseURL: "https://rajsolankime-default-rtdb.firebaseio.com",
-	projectId: "rajsolankime",
-	storageBucket: "rajsolankime.appspot.com",
-	messagingSenderId: "300109857777",
-	appId: "1:300109857777:web:e8a7b9e100015856bcfa50",
-	measurementId: "G-VE1EYR40NX"
-};
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
 
+function getfbConfig() {
+	const firebaseConfig = {
+		apiKey: "AIzaSyAkk2p00f27FoZ6RyAKJfabm4ygkMHA0VU",
+		authDomain: "rajsolankime.firebaseapp.com",
+		databaseURL: "https://rajsolankime-default-rtdb.firebaseio.com",
+		projectId: "rajsolankime",
+		storageBucket: "rajsolankime.appspot.com",
+		messagingSenderId: "300109857777",
+		appId: "1:300109857777:web:e8a7b9e100015856bcfa50",
+		measurementId: "G-VE1EYR40NX"
+	  };
 
-
-$('#myForm').on('submit', function (e) {
-	e.preventDefault();
-	var n = $('#name').val;
-	// $('#exampleModal').modal('show');
-	set(ref(db, 'msgs/' + generateRandomString()), {
-		"name": $('#name').val(),
-		"email": $('#email').val(),
-		"subject": $('#subject').val(),
-		"message": $('#message').val(),
-	});
-	$('#sendmessage').css("display", "block");
-	$('#name').val("");
-	$('#email').val("");
-	$('#subject').val("");
-	$('#message').val("");
-});
-
-
+	  return firebaseConfig;
+  }
 
 function generateRandomString() {
 	const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

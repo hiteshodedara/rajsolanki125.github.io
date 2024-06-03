@@ -377,11 +377,33 @@
   <!-- <script src="contactform/contactform.js"></script> -->
 
   <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getDatabase, ref, set, } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+    const firebaseConfig = getfbConfig();
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    $('#myForm').on('submit', function (e) {
+      e.preventDefault();
+      var n = $('#name').val;
+      // $('#exampleModal').modal('show');
+      set(ref(db, 'msgs/' + generateRandomString()), {
+        "name": $('#name').val(),
+        "email": $('#email').val(),
+        "subject": $('#subject').val(),
+        "message": $('#message').val(),
+      });
+      $('#sendmessage').css("display", "block");
+      $('#name').val("");
+      $('#email').val("");
+      $('#subject').val("");
+      $('#message').val("");
+    });
   </script>
-  <script src="js/main.js"></script>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
