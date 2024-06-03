@@ -1,6 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getDatabase, ref, set, } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-
 const firebaseConfig = {
 	apiKey: "AIzaSyAkk2p00f27FoZ6RyAKJfabm4ygkMHA0VU",
 	authDomain: "rajsolankime.firebaseapp.com",
