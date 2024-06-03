@@ -1,5 +1,6 @@
 $('#myForm').on('submit', function(e){
-	$('#myModal').modal('show');
+	// $('#myModal').modal('show');
+	$('#sendmessage').css("display", "block");
 	e.preventDefault();
   });
 
