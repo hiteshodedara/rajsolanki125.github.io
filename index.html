@@ -378,43 +378,6 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { getDatabase, ref, set,} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyAkk2p00f27FoZ6RyAKJfabm4ygkMHA0VU",
-      authDomain: "rajsolankime.firebaseapp.com",
-      databaseURL: "https://rajsolankime-default-rtdb.firebaseio.com",
-      projectId: "rajsolankime",
-      storageBucket: "rajsolankime.appspot.com",
-      messagingSenderId: "300109857777",
-      appId: "1:300109857777:web:e8a7b9e100015856bcfa50",
-      measurementId: "G-VE1EYR40NX"
-    };
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-
-
-
-    $('#myForm').on('submit', function (e) {
-      e.preventDefault();
-      var n = $('#name').val;
-      // $('#exampleModal').modal('show');
-      set(ref(db, 'msgs/' + generateRandomString()), {
-        "name": $('#name').val(),
-        "email": $('#email').val(),
-        "subject": $('#subject').val(),
-        "message": $('#message').val(),
-      });
-      $('#sendmessage').css("display", "block");
-      $('#name').val("");
-      $('#email').val("");
-      $('#subject').val("");
-      $('#message').val("");
-    });
-  </script>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
