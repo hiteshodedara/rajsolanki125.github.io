@@ -1,20 +1,20 @@
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-// import { getAnalytics, getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAnalytics, getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 
-// const firebaseConfig = {
-//     apiKey: "AIzaSyAkk2p00f27FoZ6RyAKJfabm4ygkMHA0VU",
-//     authDomain: "rajsolankime.firebaseapp.com",
-//     databaseURL: "https://rajsolankime-default-rtdb.firebaseio.com",
-//     projectId: "rajsolankime",
-//     storageBucket: "rajsolankime.appspot.com",
-//     messagingSenderId: "300109857777",
-//     appId: "1:300109857777:web:e8a7b9e100015856bcfa50",
-//     measurementId: "G-VE1EYR40NX"
-//   };
-//   // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-// const db = getDatabase(app);
+const firebaseConfig = {
+    apiKey: "AIzaSyAkk2p00f27FoZ6RyAKJfabm4ygkMHA0VU",
+    authDomain: "rajsolankime.firebaseapp.com",
+    databaseURL: "https://rajsolankime-default-rtdb.firebaseio.com",
+    projectId: "rajsolankime",
+    storageBucket: "rajsolankime.appspot.com",
+    messagingSenderId: "300109857777",
+    appId: "1:300109857777:web:e8a7b9e100015856bcfa50",
+    measurementId: "G-VE1EYR40NX"
+  };
+  // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = getDatabase(app);
 
 
 
