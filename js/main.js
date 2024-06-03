@@ -28,6 +28,7 @@ $('#myForm').on('submit', function(e){
 	});
 	$('#sendmessage').css("display", "block");
 
+	$('#name').clear();
 	e.preventDefault();
   });
 
