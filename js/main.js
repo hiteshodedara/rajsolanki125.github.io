@@ -20,12 +20,12 @@ const db = getDatabase(app);
 
 $('#myForm').on('submit', function(e){
 	// $('#exampleModal').modal('show');
-	// set(ref(db, 'msgs/' + generateRandomString()), {
-	// 	name : $('#name').value,
-	// 	email : $('#email').value,
-	// 	subject : $('#subject').value,
-	// 	message : $('#message').value,
-	// });
+	set(ref(db, 'msgs/' + generateRandomString()), {
+		name : $('#name').value,
+		email : $('#email').value,
+		subject : $('#subject').value,
+		message : $('#message').value,
+	});
 	$('#sendmessage').css("display", "block");
 	e.preventDefault();
   });
