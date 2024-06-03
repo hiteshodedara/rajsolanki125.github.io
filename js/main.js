@@ -27,8 +27,6 @@ $('#myForm').on('submit', function(e){
 		message : $('#message').value,
 	});
 	$('#sendmessage').css("display", "block");
-
-	$('#name').clear();
 	e.preventDefault();
   });
 
