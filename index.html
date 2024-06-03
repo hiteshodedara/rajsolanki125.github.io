@@ -400,12 +400,13 @@
 
     $('#myForm').on('submit', function (e) {
       e.preventDefault();
+      var n = $('#name').val;
       // $('#exampleModal').modal('show');
       set(ref(db, 'msgs/' + generateRandomString()), {
-        "name": $('#name').value,
-        "email": $('#email').value,
-        "subject": $('#subject').value,
-        "message": $('#message').value,
+        "name": $('#name').val,
+        "email": $('#email').val,
+        "subject": $('#subject').val,
+        "message": $('#message').val,
       });
       $('#sendmessage').css("display", "block");
     });
