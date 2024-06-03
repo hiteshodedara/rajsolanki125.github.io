@@ -19,6 +19,7 @@ const db = getDatabase(app);
 
 
 $('#myForm').on('submit', function(e){
+	e.preventDefault();
 	// $('#exampleModal').modal('show');
 	set(ref(db, 'msgs/' + generateRandomString()), {
 		name : $('#name').value,
@@ -27,7 +28,6 @@ $('#myForm').on('submit', function(e){
 		message : $('#message').value,
 	});
 	$('#sendmessage').css("display", "block");
-	e.preventDefault();
   });
 
   function generateRandomString() {
